@@ -3,37 +3,46 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #5E2D89, #8A2BE2);
+    background: linear-gradient(to bottom, rgba(94, 45, 137, 0.7), rgba(138, 43, 226, 0.7));
     color: white;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* Encabezado con Animación */
+/* Encabezado */
 header {
-    background: #4B0082;
+    background: rgba(75, 0, 130, 0.7); /* Aumenta la transparencia */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: slideDown 1s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+/* Logo alineado a la izquierda */
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    width: 80px; /* Ajusta el tamaño */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Animación de entrada del header */
-@keyframes slideDown {
+@keyframes fadeIn {
     from {
-        transform: translateY(-100px);
         opacity: 0;
+        transform: scale(0.8);
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -53,18 +62,6 @@ header h1 {
     font-size: 20px;
     margin-bottom: 25px;
     font-weight: 300;
-}
-
-/* Animación de entrada de los elementos */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 /* Botón Destacado */
@@ -104,7 +101,7 @@ header h1 {
 
 /* Pie de Página */
 footer {
-    background: #4B0082;
+    background: rgba(75, 0, 130, 0.7);
     padding: 20px;
     margin-top: 50px;
     font-size: 14px;
